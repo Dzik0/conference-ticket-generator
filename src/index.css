@@ -1,1 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  --font-inconsolata: 'Inconsolata', sans-serif;
+
+  /* Neutral Colors */
+  --color-neutral-900: #0d082d;
+  --color-neutral-700: #4b4869;
+  --color-neutral-500: #8784a5;
+  --color-neutral-300: #d1d0d5;
+  --color-neutral-0: #ffffff;
+
+  /* Orange Colors */
+  --color-orange-700: #e1604f;
+  --color-orange-500: #f57463;
+
+  /* Gradient */
+  --gradient-01: linear-gradient(90deg, #f37362 0%, #fff 100%);
+
+  /* Breakpoints */
+
+  --breakpoint-tablet: 960px;
+  --breakpoint-pc: 1440px;
+}
