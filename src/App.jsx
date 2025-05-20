@@ -1,4 +1,8 @@
 function App() {
-  return <h1 className="text-2xl bg-red-500">Hello Word!</h1>;
+  return (
+    <h1 className="bg-sky-700 px-4 py-2 text-white sm:px-8 sm:py-3">
+      Hello Word!
+    </h1>
+  );
 }
 export default App;
