@@ -1,6 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 @import 'tailwindcss';
 
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overscroll-behavior: none;
+  font-family: 'Inconsolata', sans-serif;
+  background-image:
+    url(/public/pattern-line-top.svg),
+    url(/public/pattern-lines-bottom-mobile.svg),
+    url(/public/background-mobile.png);
+  background-position:
+    top right,
+    0px 115%,
+    center;
+  background-size:
+    100px 100px,
+    380px 380px,
+    cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 @theme {
   --font-inconsolata: 'Inconsolata', sans-serif;
 
