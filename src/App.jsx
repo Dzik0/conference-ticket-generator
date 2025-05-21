@@ -4,11 +4,15 @@ import { useState } from 'react';
 
 function App() {
   const [details, setDetails] = useState({});
-  console.log(details);
+  const [registered, setRegistered] = useState(false);
+
   return (
     <div className="max-w-[700px]">
-      {/* <Form setDetails={setDetails} /> */}
-      <FinalTicket />
+      {!registered ? (
+        <Form setDetails={setDetails} setRegistered={setRegistered} />
+      ) : (
+        <FinalTicket details={details} />
+      )}
     </div>
   );
 }

@@ -1,4 +1,8 @@
-function FinalTicket() {
+function FinalTicket({ details }) {
+  const nameSplit = details.name.split(' ');
+  const firstName = nameSplit[0];
+  const lastName = nameSplit[1];
+
   return (
     <div className="px-6 py-10">
       <div className="mb-15 text-center">
@@ -8,13 +12,13 @@ function FinalTicket() {
           </div>
         </div>
         <h2 className="mt-10 text-3xl font-semibold">
-          Congrats, <span>Piotr</span> <span>Głazowski</span>! <br />
+          Congrats, <span>{firstName}</span> <span>{lastName}</span>! <br />
           Your ticket is ready.
         </h2>
         <p className="mt-5 text-xl text-neutral-400">
           We've emailed your ticket to{' '}
-          <span className="text-orange-500">hunter92@gmail.com</span> and will
-          send updates int he run up to the event.
+          <span className="text-orange-500">{details.mail}</span> and will send
+          updates int he run up to the event.
         </p>
       </div>
       <div className="flex justify-center">
@@ -27,16 +31,16 @@ function FinalTicket() {
           </div>
           <div className="absolute bottom-0 px-4 py-3">
             <div className="flex flex-row items-center gap-4">
-              <div className="h-10 w-10 overflow-hidden rounded-md">
-                <img src="/image-avatar.jpg" alt="" />
+              <div className="w-11 overflow-hidden rounded-md">
+                <img src={details.pic} alt="" />
               </div>
               <div>
-                <p className="text-xl">Jonatan Kristof</p>
+                <p className="text-xl">{details.name}</p>
                 <div className="flex flex-row items-center gap-1">
-                  <div className="w-5">
+                  <div className="w-4">
                     <img src="/icon-github.svg" alt="" />
                   </div>
-                  <p className="text-xs text-neutral-400"> @jontatan</p>
+                  <p className="text-xs text-neutral-400"> @{details.github}</p>
                 </div>
               </div>
             </div>

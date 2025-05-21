@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 
-function Form({ setDetails }) {
+function Form({ setDetails, setRegistered }) {
   const [file, setFile] = useState();
   const inputRef = useRef();
 
@@ -44,6 +44,7 @@ function Form({ setDetails }) {
     const allData = { ...dataForm, pic: finalPic };
 
     setDetails(allData);
+    setRegistered(true);
   }
   return (
     <div className="px-6 py-10">
@@ -139,7 +140,7 @@ function Form({ setDetails }) {
             name="name"
             className="mt-3 w-full rounded-xl border-2 border-neutral-300 bg-neutral-500 p-3 text-white"
             placeholder="Rob Pelinka"
-            defaultValue="ROB"
+            required
           />
         </div>
         <div className="mb-8">
@@ -153,7 +154,7 @@ function Form({ setDetails }) {
             name="mail"
             className="mt-3 w-full rounded-xl border-2 border-neutral-300 bg-neutral-500 p-3 text-white"
             placeholder="example@email.com"
-            defaultValue="hun@gma.com"
+            required
           />
         </div>
         <div className="mb-5">
@@ -166,8 +167,8 @@ function Form({ setDetails }) {
             name="github"
             id="github"
             className="mt-3 w-full rounded-xl border-2 border-neutral-300 bg-neutral-500 p-3 text-white"
-            placeholder="@Username"
-            defaultValue="DZKO"
+            placeholder="Username"
+            required
           />
         </div>
         <button className="w-full rounded-xl bg-orange-700 p-3 text-xl font-bold text-black">
