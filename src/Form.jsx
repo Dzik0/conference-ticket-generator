@@ -48,8 +48,10 @@ function Form({ setDetails }) {
   return (
     <div className="px-6 py-10">
       <div className="text-center">
-        <div className="flex justify-center">
-          <img src="/logo-full.svg" alt="" />
+        <div className="flex w-full items-center justify-center">
+          <div className="w-55">
+            <img src="/logo-full.svg" alt="" className="w-10" />
+          </div>
         </div>
         <h1 className="mt-10 text-3xl font-semibold">
           Your Journey to Coding Conf 2025 Starts Here!
