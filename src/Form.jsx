@@ -1,4 +1,7 @@
 import { useRef, useState } from 'react';
+import infoIcon from './assets/icon-info.svg';
+import uploadIcon from './assets/icon-upload.svg';
+import fullLogo from './assets/logo-full.svg';
 
 function Form({ setDetails, setRegistered }) {
   const [file, setFile] = useState();
@@ -53,7 +56,7 @@ function Form({ setDetails, setRegistered }) {
       <div className="text-center">
         <div className="flex w-full items-center justify-center">
           <div className="w-55">
-            <img src="/logo-full.svg" alt="" className="w-10" />
+            <img src={fullLogo} alt="" className="w-10" />
           </div>
         </div>
         <h1 className="mt-10 text-3xl font-semibold">
@@ -82,7 +85,7 @@ function Form({ setDetails, setRegistered }) {
                   onClick={handleLoad}
                   className="rounded-xl border-1 border-neutral-300 bg-neutral-500 p-3"
                 >
-                  <img src="/icon-upload.svg" alt="" />
+                  <img src={uploadIcon} alt="" />
                 </div>
                 <p className="text-md mt-5 text-center text-neutral-400">
                   Drag and drop or click to upload
@@ -126,7 +129,7 @@ function Form({ setDetails, setRegistered }) {
           </div>
           <div className="mt-3 flex flex-row items-center gap-2">
             <div className="h-5 w-5">
-              <img src="/icon-info.svg" alt="" />
+              <img src={infoIcon} alt="" />
             </div>
             <p className="text-xs text-neutral-400">
               Upload your photo (JPG or PNG, max size: 500Kb).
