@@ -32,7 +32,9 @@ function Form({ setDetails, setRegistered }) {
     }
   }
 
-  function signUp(formData) {
+  function signUp(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
     const dataForm = Object.fromEntries(formData);
     let finalPic;
     const profilePic = formData.get('pic');
@@ -62,7 +64,7 @@ function Form({ setDetails, setRegistered }) {
         </p>
       </div>
       {/* FORM BELOW */}
-      <form action={signUp} className="mt-10">
+      <form onSubmit={signUp} className="mt-10">
         <div className="mb-8">
           <label htmlFor="pic" className="text-xl">
             Upload Avatar
@@ -94,6 +96,7 @@ function Form({ setDetails, setRegistered }) {
                 </div>
                 <div className="flex flex-row justify-center gap-3">
                   <button
+                    type="button"
                     className="rounded-md bg-neutral-300 px-2 py-1 text-xs"
                     onClick={() => {
                       setFile('');
@@ -102,6 +105,7 @@ function Form({ setDetails, setRegistered }) {
                     Remove image
                   </button>
                   <button
+                    type="button"
                     className="rounded-md bg-neutral-300 px-2 text-xs"
                     onClick={handleLoad}
                   >
@@ -171,7 +175,10 @@ function Form({ setDetails, setRegistered }) {
             required
           />
         </div>
-        <button className="w-full rounded-xl bg-orange-700 p-3 text-xl font-bold text-black">
+        <button
+          className="w-full rounded-xl bg-orange-700 p-3 text-xl font-bold text-black"
+          type="submit"
+        >
           Generate My Ticket
         </button>
       </form>

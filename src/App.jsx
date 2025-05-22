@@ -7,7 +7,7 @@ function App() {
   const [registered, setRegistered] = useState(false);
 
   return (
-    <div className="max-w-[700px]">
+    <div className="max-w-[750px]">
       {!registered ? (
         <Form setDetails={setDetails} setRegistered={setRegistered} />
       ) : (

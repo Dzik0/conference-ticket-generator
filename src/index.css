@@ -6,11 +6,11 @@ body {
   padding: 0;
   min-height: 100vh;
   overscroll-behavior: none;
+
   font-family: 'Inconsolata', sans-serif;
   background-image:
-    url(/public/pattern-line-top.svg),
-    url(/public/pattern-lines-bottom-mobile.svg),
-    url(/public/background-mobile.png);
+    url(/pattern-line-top.svg), url(/pattern-lines-bottom-mobile.svg),
+    url(/background-mobile.png);
   background-position:
     top right,
     0px 115%,
@@ -23,6 +23,40 @@ body {
   color: white;
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 650px) {
+  body {
+    background-image:
+      url(/pattern-line-top.svg), url(/pattern-lines-bottom-desktop.svg),
+      url(/background-tablet.png);
+    background-position:
+      top right,
+      0px 115%,
+      center;
+    background-size:
+      300px 300px,
+      480px 480px,
+      cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+}
+
+@media (min-width: 1250px) {
+  body {
+    background-image:
+      url(/pattern-line-top.svg), url(/pattern-lines-bottom-desktop.svg),
+      url(/background-desktop.png);
+    background-position:
+      top right,
+      0px 125%,
+      center;
+    background-size:
+      400px 400px,
+      680px 680px,
+      cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
 }
 
 * {
@@ -60,6 +94,6 @@ h2 span {
 
   /* Breakpoints */
 
-  --breakpoint-tablet: 960px;
-  --breakpoint-pc: 1440px;
+  --breakpoint-tablet: 660px;
+  --breakpoint-pc: 1240px;
 }

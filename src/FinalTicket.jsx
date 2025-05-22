@@ -22,30 +22,33 @@ function FinalTicket({ details }) {
         </p>
       </div>
       <div className="flex justify-center">
-        <div className="relative max-w-[500px]">
+        <div className="relative max-w-[600px]">
           <div className="absolute p-4">
             <img src="/logo-full.svg" alt="" />
-            <p className="mt-1 ml-12 text-xs text-neutral-400">
+            <p className="tablet:text-[1.2rem] mt-1 ml-12 text-xs text-neutral-400">
               Jan 31, 2025 / Austin, TX
             </p>
           </div>
           <div className="absolute bottom-0 px-4 py-3">
             <div className="flex flex-row items-center gap-4">
-              <div className="w-11 overflow-hidden rounded-md">
+              <div className="tablet:w-25 w-14 overflow-hidden rounded-md">
                 <img src={details.pic} alt="" />
               </div>
               <div>
-                <p className="text-xl">{details.name}</p>
+                <p className="tablet:text-4xl text-xl">{details.name}</p>
                 <div className="flex flex-row items-center gap-1">
-                  <div className="w-4">
+                  <div className="tablet:w-7 w-4">
                     <img src="/icon-github.svg" alt="" />
                   </div>
-                  <p className="text-xs text-neutral-400"> @{details.github}</p>
+                  <p className="tablet:text-xl text-xs text-neutral-400">
+                    {' '}
+                    @{details.github}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="absolute top-[50%] right-0 -translate-y-1/2 rotate-90 text-xl text-neutral-300">
+          <div className="tablet:text-3xl absolute top-[50%] right-0 -translate-y-1/2 rotate-90 text-xl text-neutral-300">
             #012029
           </div>
           <img src="/pattern-ticket.svg" alt="" />
