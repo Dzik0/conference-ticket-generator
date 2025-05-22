@@ -18,7 +18,7 @@ This is a responsive React component for registering users to **Coding Conf 2025
 
 ## 📷 Screenshot
 
-[screenshot.jpg]
+![Conference ticket generator screenshot](./screenshot.jpg)
 
 LIVE: https://dzik0.github.io/conference-ticket-generator/
 
